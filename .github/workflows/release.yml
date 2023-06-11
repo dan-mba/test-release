@@ -25,7 +25,7 @@ jobs:
 
       # fetch branches and switch to the temporary branch
       - name: switch to new branch
-        run: git checkout --track release-from-${{ github.sha }}
+        run: git checkout release-from-${{ github.sha }}
 
       # update app config with version
       - name: get-npm-version
