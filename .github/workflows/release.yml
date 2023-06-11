@@ -16,22 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Create a temporary, uniquely named branch to push release info to
-      - name: create temporary branch
-        uses: peterjgrainger/action-create-branch@v2.3.0
-        id: create-branch
-        with:
-          branch: "release-from-${{ github.sha }}"
-          sha: "${{ github.sha }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       # check out the repository afterwards
       - uses: actions/checkout@v3
 
+      # Create a temporary, uniquely named branch to push release info to
+      - name: create temporary branch
+        run: git branch "release-from-${{ github.sha }}" "${{ github.sha }}"
+
       # fetch branches and switch to the temporary branch
       - name: switch to new branch
-        run: git fetch --all && git checkout --track origin/release-from-${{ github.sha }}
+        run: git checkout --track release-from-${{ github.sha }}
 
       # update app config with version
       - name: get-npm-version
