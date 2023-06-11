@@ -6,10 +6,7 @@ on:
     paths-ignore:
       - "data/**"
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: write-all
 
 concurrency:
   group: "main-branch"
