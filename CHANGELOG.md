@@ -1,3 +1,12 @@
+## [1.142.2](https://github.com/dan-mba/test-release/compare/v1.142.1...v1.142.2) (2023-06-12)
+
+
+### Bug Fixes
+
+* add release notes ([f94947e](https://github.com/dan-mba/test-release/commit/f94947ee72e428e52741b90dbd546fae674cd4f1))
+
+
+
 ## [1.142.1](https://github.com/dan-mba/test-release/compare/v1.142.0...v1.142.1) (2023-06-12)
 
 
