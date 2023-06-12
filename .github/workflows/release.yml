@@ -18,6 +18,8 @@ jobs:
     steps:
       # check out the repository afterwards
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       # Create a temporary, uniquely named branch to push release info to
       - name: create temporary branch
